@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3us-iA-Lza">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimpleConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIX-Nd-w12">
+                                <rect key="frame" x="16" y="80" width="343" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <state key="normal" title="Temperature"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="kDh-6T-bRr" kind="show" id="wyO-RK-l7g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rqc-T2-NWv">
+                                <rect key="frame" x="16" y="118" width="343" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Distance"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Zxh-Ky-PP3" kind="show" id="89c-hd-tc7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rqc-T2-NWv" secondAttribute="trailing" constant="16" id="8iB-FP-Kf1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MIX-Nd-w12" secondAttribute="trailing" constant="16" id="9QA-ER-Xp9"/>
+                            <constraint firstItem="MIX-Nd-w12" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="OCE-wA-JSS"/>
+                            <constraint firstItem="Rqc-T2-NWv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="bdh-cW-Pve"/>
+                            <constraint firstItem="MIX-Nd-w12" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ll2-kh-DPK"/>
+                            <constraint firstItem="Rqc-T2-NWv" firstAttribute="top" secondItem="MIX-Nd-w12" secondAttribute="bottom" constant="8" id="tx4-6H-qKB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HDo-wT-G51"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+        </scene>
+        <!--Temperature View Controller-->
+        <scene sceneID="PrR-4f-0bL">
+            <objects>
+                <viewController id="kDh-6T-bRr" customClass="TemperatureViewController" customModule="SimpleConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fFM-dY-nHu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Temperature" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L55-GX-ZTo">
+                                <rect key="frame" x="16" y="80" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7M-VL-Yh3">
+                                <rect key="frame" x="16" y="142" width="343" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Convert To Celsius"/>
+                                <connections>
+                                    <action selector="convertToCelsius:" destination="kDh-6T-bRr" eventType="touchUpInside" id="fMS-pi-8yW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZ3-wu-qVt">
+                                <rect key="frame" x="16" y="180" width="343" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Convert to Fahrenheit"/>
+                                <connections>
+                                    <action selector="convertToFahrenheit:" destination="kDh-6T-bRr" eventType="touchUpInside" id="SXs-AD-Ne2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFK-kl-Uly">
+                                <rect key="frame" x="16" y="226" width="343" height="0.0"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bKH-iO-KLV" firstAttribute="trailing" secondItem="JZ3-wu-qVt" secondAttribute="trailing" constant="16" id="0Ln-ST-p3v"/>
+                            <constraint firstItem="u7M-VL-Yh3" firstAttribute="leading" secondItem="bKH-iO-KLV" secondAttribute="leading" constant="16" id="1gd-dn-b0H"/>
+                            <constraint firstItem="bKH-iO-KLV" firstAttribute="trailing" secondItem="CFK-kl-Uly" secondAttribute="trailing" constant="16" id="34v-D7-FIp"/>
+                            <constraint firstItem="bKH-iO-KLV" firstAttribute="trailing" secondItem="L55-GX-ZTo" secondAttribute="trailing" constant="16" id="7H9-eI-2C0"/>
+                            <constraint firstItem="L55-GX-ZTo" firstAttribute="leading" secondItem="bKH-iO-KLV" secondAttribute="leading" constant="16" id="Bl5-Jj-H17"/>
+                            <constraint firstItem="JZ3-wu-qVt" firstAttribute="leading" secondItem="bKH-iO-KLV" secondAttribute="leading" constant="16" id="DtV-g8-G2U"/>
+                            <constraint firstItem="u7M-VL-Yh3" firstAttribute="top" secondItem="L55-GX-ZTo" secondAttribute="bottom" constant="32" id="I9a-ht-EIW"/>
+                            <constraint firstItem="CFK-kl-Uly" firstAttribute="leading" secondItem="bKH-iO-KLV" secondAttribute="leading" constant="16" id="O2a-gj-dcX"/>
+                            <constraint firstItem="L55-GX-ZTo" firstAttribute="top" secondItem="bKH-iO-KLV" secondAttribute="top" constant="16" id="VIP-kp-NeG"/>
+                            <constraint firstItem="CFK-kl-Uly" firstAttribute="top" secondItem="JZ3-wu-qVt" secondAttribute="bottom" constant="16" id="dTU-v3-neR"/>
+                            <constraint firstItem="bKH-iO-KLV" firstAttribute="trailing" secondItem="u7M-VL-Yh3" secondAttribute="trailing" constant="16" id="fCJ-vc-3g2"/>
+                            <constraint firstItem="JZ3-wu-qVt" firstAttribute="top" secondItem="u7M-VL-Yh3" secondAttribute="bottom" constant="8" id="rda-xa-ZvE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bKH-iO-KLV"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="A6h-cp-ak5"/>
+                    <connections>
+                        <outlet property="labelDisplayTemp" destination="CFK-kl-Uly" id="WsE-U8-O6D"/>
+                        <outlet property="temperatureValue" destination="L55-GX-ZTo" id="Tqc-jE-0XU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oGn-w4-Zoq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2073" y="-235"/>
+        </scene>
+        <!--Distance Measure View Controller-->
+        <scene sceneID="eSF-Yf-vCc">
+            <objects>
+                <viewController id="Zxh-Ky-PP3" customClass="DistanceMeasureViewController" customModule="SimpleConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="snJ-zc-j4f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Distance" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vKq-lr-U7F">
+                                <rect key="frame" x="16" y="80" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Hi-lt-4Ty">
+                                <rect key="frame" x="16" y="142" width="343" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Convert To Centimeter"/>
+                                <connections>
+                                    <action selector="convertToCentimeter:" destination="Zxh-Ky-PP3" eventType="touchUpInside" id="EeY-oP-PwU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7EA-sP-SEo">
+                                <rect key="frame" x="16" y="180" width="343" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Convert To Inches"/>
+                                <connections>
+                                    <action selector="convertToInches:" destination="Zxh-Ky-PP3" eventType="touchUpInside" id="e6I-WE-MvC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKw-rE-ejT">
+                                <rect key="frame" x="16" y="226" width="343" height="0.0"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PWq-eP-Qwn" firstAttribute="trailing" secondItem="jKw-rE-ejT" secondAttribute="trailing" constant="16" id="1Bl-dE-Lz0"/>
+                            <constraint firstItem="jKw-rE-ejT" firstAttribute="leading" secondItem="PWq-eP-Qwn" secondAttribute="leading" constant="16" id="30p-wB-NML"/>
+                            <constraint firstItem="7EA-sP-SEo" firstAttribute="leading" secondItem="PWq-eP-Qwn" secondAttribute="leading" constant="16" id="7GK-NX-sRL"/>
+                            <constraint firstItem="PWq-eP-Qwn" firstAttribute="trailing" secondItem="7EA-sP-SEo" secondAttribute="trailing" constant="16" id="IeS-58-vlc"/>
+                            <constraint firstItem="PWq-eP-Qwn" firstAttribute="trailing" secondItem="7Hi-lt-4Ty" secondAttribute="trailing" constant="16" id="Lh7-PC-d7w"/>
+                            <constraint firstItem="7EA-sP-SEo" firstAttribute="top" secondItem="7Hi-lt-4Ty" secondAttribute="bottom" constant="8" id="QGq-if-08z"/>
+                            <constraint firstItem="7EA-sP-SEo" firstAttribute="top" secondItem="7Hi-lt-4Ty" secondAttribute="bottom" constant="8" id="SCV-uz-dNX"/>
+                            <constraint firstItem="jKw-rE-ejT" firstAttribute="top" secondItem="7EA-sP-SEo" secondAttribute="bottom" constant="16" id="arZ-fF-ueV"/>
+                            <constraint firstItem="7EA-sP-SEo" firstAttribute="leading" secondItem="PWq-eP-Qwn" secondAttribute="leading" constant="16" id="d0v-R1-CIJ"/>
+                            <constraint firstItem="PWq-eP-Qwn" firstAttribute="trailing" secondItem="vKq-lr-U7F" secondAttribute="trailing" constant="16" id="iJc-HG-fEp"/>
+                            <constraint firstItem="7Hi-lt-4Ty" firstAttribute="leading" secondItem="PWq-eP-Qwn" secondAttribute="leading" constant="16" id="jED-5K-mq4"/>
+                            <constraint firstItem="vKq-lr-U7F" firstAttribute="top" secondItem="PWq-eP-Qwn" secondAttribute="top" constant="16" id="nhf-4s-tR2"/>
+                            <constraint firstItem="vKq-lr-U7F" firstAttribute="leading" secondItem="PWq-eP-Qwn" secondAttribute="leading" constant="16" id="qjP-rz-SRe"/>
+                            <constraint firstItem="PWq-eP-Qwn" firstAttribute="trailing" secondItem="7EA-sP-SEo" secondAttribute="trailing" constant="16" id="xYA-uG-DzA"/>
+                            <constraint firstItem="7Hi-lt-4Ty" firstAttribute="top" secondItem="vKq-lr-U7F" secondAttribute="bottom" constant="32" id="zJG-59-2ix"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PWq-eP-Qwn"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TXu-2S-2eZ"/>
+                    <connections>
+                        <outlet property="displayDistanceValue" destination="jKw-rE-ejT" id="PFp-zD-MWo"/>
+                        <outlet property="distanceValue" destination="vKq-lr-U7F" id="SKc-Bg-U0v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RaI-Kl-3LF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2073" y="447"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BpG-OC-Opt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3us-iA-Lza" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ePx-yK-yhp">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4mi-do-SaX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pg0-iZ-Pdy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="25" y="134"/>
+        </scene>
+    </scenes>
+</document>
